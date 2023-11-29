@@ -13,7 +13,7 @@
     <% Project.all.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%=  %></td>
+        <td><%= project.percentage %>% </td>
         <td><%=  %></td>
       </tr>
     <% end %>
