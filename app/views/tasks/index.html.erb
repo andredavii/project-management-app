@@ -28,6 +28,13 @@
         <td><%= task.due_date %></td>
         <td><%= task.complete? %></td>
         <td><%= task.overdue? %></td>
+        <td>
+          <% if task.overdue? %>
+            <span class="badge text-bg-danger">Overdue</span>
+          <% elsif task.complete? %>
+            <span class="badge text-bg-success">Complete</span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
