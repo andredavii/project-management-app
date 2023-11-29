@@ -9,3 +9,20 @@ User.create(
   :email => "admin@projects.local",
   :password => "Pass1234"
 )
+
+project_hashes = [
+  {
+    :name => "Project 1",
+    :description => "Random text"
+  },
+  {
+    :name => "Project 2",  
+    :description => "Random text"
+  },
+  {
+    :name => "Project 3", 
+    :description => "Random text"  
+  }
+]
+
+Project.create(project_hashes)
