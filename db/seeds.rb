@@ -32,8 +32,8 @@ Project.all.each do |project|
     Task.create(
       :project => project,
       :name => "Task #{index}",
-      :due_date => Date.today,
-      :complete => false
+      :due_date => Date.today + 5 - rand(10),
+      :complete => rand(0..2)
     )
 
   end
