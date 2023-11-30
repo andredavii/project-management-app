@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  has_many :tasks
+  has_many :tasks, :dependent => :destroy 
 
   #total tasks that have complete == true
   def complete_tasks
@@ -24,5 +24,12 @@ class Project < ApplicationRecord
     else 
       0
     end
+  end
+
+  def overdue_tasks
+    overdue = tasks.select do |task|
+      task.overdue?
+    end
+    overdue.count
   end
 end

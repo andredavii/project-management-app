@@ -24,7 +24,7 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.name %></td>
+        <td><%= link_to task.name, project_task_path(@project, task) %></td>
         <td><%= task.due_date %></td>
         <td><%= task.complete? %></td>
         <td><%= task.overdue? %></td>

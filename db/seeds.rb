@@ -26,3 +26,15 @@ project_hashes = [
 ]
 
 Project.create(project_hashes)
+
+Project.all.each do |project|
+  10.times do |index|
+    Task.create(
+      :project => project,
+      :name => "Task #{index}",
+      :due_date => Date.today,
+      :complete => false
+    )
+
+  end
+end

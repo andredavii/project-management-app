@@ -12,9 +12,9 @@
   <tbody>
     <% Project.all.each do |project| %>
       <tr>
-        <td><%= project.name %></td>
+        <td><%= link_to project.name, project %></td>
         <td><%= project.percentage %>% </td>
-        <td><%=  %></td>
+        <td><%= project.overdue_tasks %></td>
       </tr>
     <% end %>
   </tbody>
